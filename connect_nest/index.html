@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectNest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Page -->
+        <div id="loginPage" class="page">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showRegisterPage()">Register here</a></p>
+            </form>
+        </div>
+
+        <!-- Register Page -->
+        <div id="registerPage" class="page" style="display: none;">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="registerUsername">Username:</label>
+                <input type="text" id="registerUsername" required>
+                <label for="registerPassword">Password:</label>
+                <input type="password" id="registerPassword" required>
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="#" onclick="showLoginPage()">Login here</a></p>
+            </form>
+        </div>
+
+        <!-- Home Page -->
+        <div id="homePage" class="page" style="display: none;">
+            <header>
+                <h1>Welcome, <span id="userName">User</span></h1>
+                <button onclick="logout()">Logout</button>
+            </header>
+            <div class="profile">
+                <h2>Profile</h2>
+                <img id="profilePic" src="default-profile.png" alt="Profile Picture">
+                <input type="file" id="profilePicInput" onchange="updateProfilePic()">
+            </div>
+            <div class="status-update">
+                <h2>Update Status</h2>
+                <textarea id="statusInput" placeholder="What's on your mind?"></textarea>
+                <button onclick="updateStatus()">Update Status</button>
+            </div>
+            <div class="inbox">
+                <h2>Inbox</h2>
+                <button onclick="viewInbox()">View Inbox</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

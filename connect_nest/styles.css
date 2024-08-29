@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: 600px;
+  margin: auto;
+}
+
+.page {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile input {
+  display: block;
+  margin-top: 10px;
+}
+
+.status-update textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.inbox {
+  margin-top: 20px;
+}
